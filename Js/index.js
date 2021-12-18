@@ -9,11 +9,13 @@ const DOM = {
     noteContainer: null,
     submitButton: null,
     clearButton: null,
+    sortButton: null,
 }
 
 const CONFIG = { NOTES: "notes" }
 const state = {
     notes: [],
+    sortedNotes: [],
 }
 
 function init() {
@@ -26,9 +28,11 @@ function init() {
     DOM.noteContainer = document.querySelector("#noteContainer");
     DOM.submitButton = document.querySelector("#noteSubmitBtn");
     DOM.clearButton = document.querySelector("#noteClearBtn");
+    DOM.sortButton = document.querySelector("#sortBtn");
 
     DOM.submitButton.addEventListener("click", addNote)
     DOM.clearButton.addEventListener("click", releaseForm)
+     DOM.sortButton.addEventListener("click", sortByPriorty)
 
     try {
         const notesString = localStorage.getItem(CONFIG.NOTES);
