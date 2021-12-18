@@ -27,7 +27,7 @@ body{
 .note{
   text-decoration:none;
   color:#000;
-  background:#DA7F8F;
+  /* background:#DA7F8F; */
   display:inline-block;
   height:15em;
   width:15em;
@@ -36,6 +36,18 @@ body{
   transform: rotate(-3deg);
   transition: transform .15s linear;
   
+}
+
+.basicNote{
+  background:#CF73D9;
+}
+
+.importentNote{
+  background:#68D9BC;
+}
+
+.urgentNote{
+  background:#DA7F8F;
 }
 
 .pInNote{
@@ -48,7 +60,7 @@ body{
 .timeStamp{
   margin: 0;
   color:white;
-  background-color:#923d4d ;
+  /* background-color:#923d4d ; */
   width: 100%;
   height: 20%;
   text-align: center;
@@ -56,6 +68,17 @@ body{
   padding-top: 6%;
 }
 
+.TimebasicNote{
+  background:#925199;
+}
+
+.TimeimportentNote{
+  background:#499985;
+}
+
+.TimeurgentNote{
+  background:#995965;
+}
 
 #noteContainer{
   background-color: #E1E5EA;
