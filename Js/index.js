@@ -43,27 +43,31 @@ function draw(notes) {
         const note = getNoteUi(notes[index]);
         if (!notes) return;
 
-        if (!notes[index].hasAnimated) {
-            note.classList.add("animated");
-            notes[index].hasAnimated = true;
+        _addAnimation(notes[index], note);
+
+        _addCheckedClass(notes[index], note)
+
+        DOM.noteContainer.append(note);
+    }
+
+    function _addAnimation(noteFromState, noteUi) {
+        if (!noteFromState.hasAnimated) {
+            noteUi.classList.add("animated");
+            noteFromState.hasAnimated = true;
             setTimeout(function () {
-                note.classList.remove("animated");
+                noteUi.classList.remove("animated");
             }, 2000);
         }
+    }
 
-        if (notes[index].hasChaked) {
-            note.classList.add("chaked");
+    function _addCheckedClass(noteFromState, noteUi) {
+        if (noteFromState.hasChaked) {
+            noteUi.classList.add("chaked");
         }
 
-        else { note.classList.remove("chaked") };
-        DOM.noteContainer.append(note);
-
+        else { noteUi.classList.remove("chaked") };
 
     }
-    //goind to order the draw to liitle functions 
-    // function _addAnimation(noteFromState){
-
-    // }
 }
 
 init();
