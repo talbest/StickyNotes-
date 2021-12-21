@@ -19,3 +19,4 @@ function makeSortedState() {
 }
 
 // can make it as the current state   and then set the local storege  
+//not sure what is the best way as user exprience id to change his state after a sort 
